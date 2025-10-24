@@ -56,46 +56,39 @@ def main():
     all_results = []
     try:
         with open(results_filepath, 'r') as f:
-            # YAMLファイルを安全にロードし、ジェネレータとして扱う
             docs = yaml.safe_load_all(f)
-            # 最初のドキュメント（config）をスキップ
+            # 最初のドキュメント（config）は読み飛ばす
             next(docs, None) 
-            # 結果をリストにロード
+            # 2つ目以降のドキュメント（結果リスト）をロード
             for doc in docs:
-                if doc: # 空のドキュメントをスキップ
+                if doc:
                     all_results.extend(doc)
 
             for result in all_results:
                 if 'experiment' in result and 'id' in result['experiment']:
                     completed_ids.add(result['experiment']['id'])
-        print(f"Found {len(completed_ids)} completed experiments in '{results_filepath}'. Resuming...")
-    except FileNotFoundError:
-        print("No existing results file found. Starting a new run.")
+        if completed_ids:
+             print(f"Found {len(completed_ids)} completed experiments in '{results_filepath}'. Resuming...")
+    except (FileNotFoundError, StopIteration):
+        print("No existing results file found or file is empty. Starting a new run.")
         # ファイルがなければ、configスナップショット付きで新規作成
         with open(results_filepath, 'w') as f:
             yaml.dump({'configuration_snapshot': config}, f, sort_keys=False, default_flow_style=False, indent=2)
-            f.write("\n---\n") # YAMLドキュメントの区切り
-
-    # ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
-    # 修正箇所2: 完了済みの実験を除外し、「やるべきことリスト」を作成
-    # ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+            f.write("\n---\n")
+    
     experiments_to_run = [exp for exp in full_experiment_grid if exp['id'] not in completed_ids]
     
     if not experiments_to_run:
         print("All experiments defined in the config are already complete. Nothing to do.")
         return
 
-    # --- Run Remaining Experiments ---
     pbar = tqdm(experiments_to_run, initial=len(completed_ids), total=len(full_experiment_grid))
     
-    # 追記時の区切り制御のため、最後の実験条件を取得
     previous_pair = tuple(all_results[-1]['experiment']['pair']) if all_results else None
     previous_error_type = all_results[-1]['experiment']['error_type'] if all_results else None
 
     for exp_conditions in pbar:
         pbar.set_description(f"Running: {exp_conditions['id']}")
-        
-        # idは内部管理用なので、関数に渡す前に辞書から削除
         current_id = exp_conditions.pop('id')
         
         train_loader, val_loader, test_loader = get_mnist_data_loaders(
@@ -113,19 +106,20 @@ def main():
         with open(results_filepath, 'a') as f:
             current_pair = tuple(exp_conditions['pair'])
             current_error_type = exp_conditions['error_type']
-
-            if previous_pair is not None:
+            if completed_ids or previous_pair is not None:
                 if current_pair != previous_pair:
                     f.write("\n# --------------------------------------------------\n")
                     f.write(f"#   New Pair: {current_pair[0]} vs {current_pair[1]}\n")
                     f.write("# --------------------------------------------------\n\n")
                 elif current_error_type != previous_error_type:
                     f.write("\n")
-
+            
             yaml.dump([result_entry], f, sort_keys=False, default_flow_style=False)
             
             previous_pair = current_pair
             previous_error_type = current_error_type
+            completed_ids.add(current_id)
+
 
     print(f"\nAll experiments completed. Results saved to {results_filepath}")
 

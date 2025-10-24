@@ -1,7 +1,3 @@
-# ==================================================
-#      CONFIGURATION USED FOR THIS RUN
-# ==================================================
-
 configuration_snapshot:
   seed: 42
   results_file: results/experiment_outputs.yaml
@@ -47,10 +43,7 @@ configuration_snapshot:
     validation_split: 0.2
     num_workers: 8
 
-# ==================================================
-#           EXPERIMENT RESULTS BEGIN
-# ==================================================
-
+---
 - experiment:
     id: 0v1_mutual_mixing_0.00
     pair:
@@ -5905,3 +5898,1861 @@ configuration_snapshot:
       - 970
     - - 907
       - 51
+- experiment:
+    id: 0v6_mutual_mixing_0.70
+    pair:
+    - 0
+    - 6
+    error_type: mutual_mixing
+    error_rate: 0.7
+    noise_source_class: null
+    total_epochs: 50
+    final_loss:
+      train: 0.6058190107345581
+      validation: 0.5992141962051392
+      test: 1.0887068510055542
+    accuracy:
+      train: 0.6948168478834582
+      validation: 0.7094594594594594
+      test: 0.01393188854489164
+    best_epoch: 3
+    precision: 0.016243654822335026
+    recall: 0.016701461377870562
+    f1_score: 0.016469377251672673
+    confusion_matrix:
+    - - 11
+      - 969
+    - - 942
+      - 16
+- experiment:
+    id: 0v6_mutual_mixing_0.75
+    pair:
+    - 0
+    - 6
+    error_type: mutual_mixing
+    error_rate: 0.75
+    noise_source_class: null
+    total_epochs: 50
+    final_loss:
+      train: 0.5567902088165283
+      validation: 0.5755207240581512
+      test: 1.2202852964401245
+    accuracy:
+      train: 0.7463316795101869
+      validation: 0.7580236486486487
+      test: 0.011351909184726523
+    best_epoch: 4
+    precision: 0.013211382113821139
+    recall: 0.013569937369519834
+    f1_score: 0.013388259526261586
+    confusion_matrix:
+    - - 9
+      - 971
+    - - 945
+      - 13
+- experiment:
+    id: 0v6_mutual_mixing_0.80
+    pair:
+    - 0
+    - 6
+    error_type: mutual_mixing
+    error_rate: 0.8
+    noise_source_class: null
+    total_epochs: 50
+    final_loss:
+      train: 0.4761451184749603
+      validation: 0.5115693211555481
+      test: 1.4902642965316772
+    accuracy:
+      train: 0.799535522009923
+      validation: 0.7994087837837838
+      test: 0.010319917440660475
+    best_epoch: 7
+    precision: 0.01417004048582996
+    recall: 0.014613778705636743
+    f1_score: 0.014388489208633094
+    confusion_matrix:
+    - - 6
+      - 974
+    - - 944
+      - 14
+- experiment:
+    id: 0v6_mutual_mixing_0.85
+    pair:
+    - 0
+    - 6
+    error_type: mutual_mixing
+    error_rate: 0.85
+    noise_source_class: null
+    total_epochs: 50
+    final_loss:
+      train: 0.41222071647644043
+      validation: 0.4254080653190613
+      test: 1.6614952087402344
+    accuracy:
+      train: 0.8474612055315106
+      validation: 0.8547297297297297
+      test: 0.00980392156862745
+    best_epoch: 6
+    precision: 0.017085427135678392
+    recall: 0.017745302713987474
+    f1_score: 0.017409114183307733
+    confusion_matrix:
+    - - 2
+      - 978
+    - - 941
+      - 17
+- experiment:
+    id: 0v6_mutual_mixing_0.90
+    pair:
+    - 0
+    - 6
+    error_type: mutual_mixing
+    error_rate: 0.9
+    noise_source_class: null
+    total_epochs: 50
+    final_loss:
+      train: 0.3117935359477997
+      validation: 0.32769061625003815
+      test: 2.0983541011810303
+    accuracy:
+      train: 0.8993982898764911
+      validation: 0.8994932432432432
+      test: 0.008771929824561403
+    best_epoch: 6
+    precision: 0.0121580547112462
+    recall: 0.012526096033402923
+    f1_score: 0.012339331619537276
+    confusion_matrix:
+    - - 5
+      - 975
+    - - 946
+      - 12
+- experiment:
+    id: 0v6_mutual_mixing_0.95
+    pair:
+    - 0
+    - 6
+    error_type: mutual_mixing
+    error_rate: 0.95
+    noise_source_class: null
+    total_epochs: 50
+    final_loss:
+      train: 0.18738478124141694
+      validation: 0.2529197707772255
+      test: 2.7335798740386963
+    accuracy:
+      train: 0.9503853056054048
+      validation: 0.9400337837837838
+      test: 0.007223942208462332
+    best_epoch: 6
+    precision: 0.012121212121212121
+    recall: 0.012526096033402923
+    f1_score: 0.012320328542094456
+    confusion_matrix:
+    - - 2
+      - 978
+    - - 946
+      - 12
+- experiment:
+    id: 0v6_mutual_mixing_1.00
+    pair:
+    - 0
+    - 6
+    error_type: mutual_mixing
+    error_rate: 1.0
+    noise_source_class: null
+    total_epochs: 50
+    final_loss:
+      train: 0.002458647731691599
+      validation: 0.029362283647060394
+      test: 6.558657646179199
+    accuracy:
+      train: 0.999894436820437
+      validation: 0.9945101351351351
+      test: 0.005675954592363261
+    best_epoch: 11
+    precision: 0.007121057985757884
+    recall: 0.007306889352818371
+    f1_score: 0.0072127769191138585
+    confusion_matrix:
+    - - 4
+      - 976
+    - - 951
+      - 7
+
+- experiment:
+    id: 0v6_external_noise_0.00
+    pair:
+    - 0
+    - 6
+    error_type: external_noise
+    error_rate: 0.0
+    noise_source_class: null
+    total_epochs: 50
+    final_loss:
+      train: 0.0003147710755001754
+      validation: 0.0159217631444335
+      test: 0.02397032454609871
+    accuracy:
+      train: 1.0
+      validation: 0.997043918918919
+      test: 0.9943240454076367
+    best_epoch: 34
+    precision: 0.9947753396029259
+    recall: 0.9937369519832986
+    f1_score: 0.9942558746736292
+    confusion_matrix:
+    - - 975
+      - 5
+    - - 6
+      - 952
+- experiment:
+    id: 0v6_external_noise_0.05
+    pair:
+    - 0
+    - 6
+    error_type: external_noise
+    error_rate: 0.05
+    noise_source_class: 8
+    total_epochs: 50
+    final_loss:
+      train: 0.04795538485050201
+      validation: 0.059475427493453026
+      test: 0.024457888677716255
+    accuracy:
+      train: 0.9762482845983321
+      validation: 0.9674831081081081
+      test: 0.9922600619195047
+    best_epoch: 3
+    precision: 0.9947534102833159
+    recall: 0.9895615866388309
+    f1_score: 0.9921507064364207
+    confusion_matrix:
+    - - 975
+      - 5
+    - - 10
+      - 948
+- experiment:
+    id: 0v6_external_noise_0.10
+    pair:
+    - 0
+    - 6
+    error_type: external_noise
+    error_rate: 0.1
+    noise_source_class: 2
+    total_epochs: 50
+    final_loss:
+      train: 0.053660377860069275
+      validation: 0.10257670655846596
+      test: 0.018865391612052917
+    accuracy:
+      train: 0.9782539850100285
+      validation: 0.9375
+      test: 0.9932920536635707
+    best_epoch: 9
+    precision: 0.9947643979057592
+    recall: 0.9916492693110647
+    f1_score: 0.9932043910088866
+    confusion_matrix:
+    - - 975
+      - 5
+    - - 8
+      - 950
+- experiment:
+    id: 0v6_external_noise_0.15
+    pair:
+    - 0
+    - 6
+    error_type: external_noise
+    error_rate: 0.15
+    noise_source_class: 2
+    total_epochs: 50
+    final_loss:
+      train: 0.07340153008699417
+      validation: 0.110359787940979
+      test: 0.01894039660692215
+    accuracy:
+      train: 0.973398078750132
+      validation: 0.9311655405405406
+      test: 0.9938080495356038
+    best_epoch: 12
+    precision: 0.9958071278825996
+    recall: 0.9916492693110647
+    f1_score: 0.9937238493723849
+    confusion_matrix:
+    - - 976
+      - 4
+    - - 8
+      - 950
+- experiment:
+    id: 0v6_external_noise_0.20
+    pair:
+    - 0
+    - 6
+    error_type: external_noise
+    error_rate: 0.2
+    noise_source_class: 4
+    total_epochs: 50
+    final_loss:
+      train: 0.1259728953242302
+      validation: 0.15724817663431168
+      test: 0.02028568461537361
+    accuracy:
+      train: 0.9351842077483373
+      validation: 0.9037162162162162
+      test: 0.9953560371517027
+    best_epoch: 9
+    precision: 0.9989484752891693
+    recall: 0.9916492693110647
+    f1_score: 0.9952854897852279
+    confusion_matrix:
+    - - 979
+      - 1
+    - - 8
+      - 950
+- experiment:
+    id: 0v6_external_noise_0.25
+    pair:
+    - 0
+    - 6
+    error_type: external_noise
+    error_rate: 0.25
+    noise_source_class: 2
+    total_epochs: 50
+    final_loss:
+      train: 0.1765959620475769
+      validation: 0.2047589346766472
+      test: 0.02775975875556469
+    accuracy:
+      train: 0.893064499102713
+      validation: 0.8597972972972973
+      test: 0.9932920536635707
+    best_epoch: 5
+    precision: 0.9968454258675079
+    recall: 0.9895615866388309
+    f1_score: 0.9931901519119958
+    confusion_matrix:
+    - - 977
+      - 3
+    - - 10
+      - 948
+- experiment:
+    id: 0v6_external_noise_0.30
+    pair:
+    - 0
+    - 6
+    error_type: external_noise
+    error_rate: 0.3
+    noise_source_class: 2
+    total_epochs: 50
+    final_loss:
+      train: 0.18920832872390747
+      validation: 0.20746181160211563
+      test: 0.020411325618624687
+    accuracy:
+      train: 0.9093212287554101
+      validation: 0.862331081081081
+      test: 0.9943240454076367
+    best_epoch: 9
+    precision: 0.9978969505783386
+    recall: 0.9906054279749478
+    f1_score: 0.9942378208486118
+    confusion_matrix:
+    - - 978
+      - 2
+    - - 9
+      - 949
+- experiment:
+    id: 0v6_external_noise_0.35
+    pair:
+    - 0
+    - 6
+    error_type: external_noise
+    error_rate: 0.35
+    noise_source_class: 7
+    total_epochs: 50
+    final_loss:
+      train: 0.2390852987766266
+      validation: 0.2596954256296158
+      test: 0.0198239553719759
+    accuracy:
+      train: 0.8536894331257258
+      validation: 0.8209459459459459
+      test: 0.9943240454076367
+    best_epoch: 8
+    precision: 0.9958115183246073
+    recall: 0.9926931106471816
+    f1_score: 0.9942498693152118
+    confusion_matrix:
+    - - 976
+      - 4
+    - - 7
+      - 951
+- experiment:
+    id: 0v6_external_noise_0.40
+    pair:
+    - 0
+    - 6
+    error_type: external_noise
+    error_rate: 0.4
+    noise_source_class: 4
+    total_epochs: 50
+    final_loss:
+      train: 0.2705702126026154
+      validation: 0.2677678316831589
+      test: 0.024755112826824188
+    accuracy:
+      train: 0.8447165628628734
+      validation: 0.799831081081081
+      test: 0.9917440660474717
+    best_epoch: 8
+    precision: 0.9937106918238994
+    recall: 0.9895615866388309
+    f1_score: 0.9916317991631799
+    confusion_matrix:
+    - - 974
+      - 6
+    - - 10
+      - 948
+- experiment:
+    id: 0v6_external_noise_0.45
+    pair:
+    - 0
+    - 6
+    error_type: external_noise
+    error_rate: 0.45
+    noise_source_class: 7
+    total_epochs: 50
+    final_loss:
+      train: 0.3129541099071503
+      validation: 0.31897562742233276
+      test: 0.02329367585480213
+    accuracy:
+      train: 0.8044969914493825
+      validation: 0.7787162162162162
+      test: 0.9927760577915377
+    best_epoch: 5
+    precision: 0.9957983193277311
+    recall: 0.9895615866388309
+    f1_score: 0.9926701570680628
+    confusion_matrix:
+    - - 976
+      - 4
+    - - 10
+      - 948
+- experiment:
+    id: 0v6_external_noise_0.50
+    pair:
+    - 0
+    - 6
+    error_type: external_noise
+    error_rate: 0.5
+    noise_source_class: 8
+    total_epochs: 50
+    final_loss:
+      train: 0.3259009838104248
+      validation: 0.38683144748210907
+      test: 0.026566915214061737
+    accuracy:
+      train: 0.819381399767761
+      validation: 0.7419763513513513
+      test: 0.9922600619195047
+    best_epoch: 7
+    precision: 0.9947534102833159
+    recall: 0.9895615866388309
+    f1_score: 0.9921507064364207
+    confusion_matrix:
+    - - 975
+      - 5
+    - - 10
+      - 948
+- experiment:
+    id: 0v6_external_noise_0.55
+    pair:
+    - 0
+    - 6
+    error_type: external_noise
+    error_rate: 0.55
+    noise_source_class: 9
+    total_epochs: 50
+    final_loss:
+      train: 0.3648688614368439
+      validation: 0.4113132506608963
+      test: 0.021825429052114487
+    accuracy:
+      train: 0.7814842183046553
+      validation: 0.7153716216216216
+      test: 0.9927760577915377
+    best_epoch: 7
+    precision: 0.9968421052631579
+    recall: 0.988517745302714
+    f1_score: 0.9926624737945493
+    confusion_matrix:
+    - - 977
+      - 3
+    - - 11
+      - 947
+- experiment:
+    id: 0v6_external_noise_0.60
+    pair:
+    - 0
+    - 6
+    error_type: external_noise
+    error_rate: 0.6
+    noise_source_class: 8
+    total_epochs: 50
+    final_loss:
+      train: 0.413557755947113
+      validation: 0.44802260398864746
+      test: 0.032221850007772446
+    accuracy:
+      train: 0.7397867623772828
+      validation: 0.6955236486486487
+      test: 0.9907120743034056
+    best_epoch: 4
+    precision: 0.9957805907172996
+    recall: 0.9853862212943633
+    f1_score: 0.9905561385099685
+    confusion_matrix:
+    - - 976
+      - 4
+    - - 14
+      - 944
+- experiment:
+    id: 0v6_external_noise_0.65
+    pair:
+    - 0
+    - 6
+    error_type: external_noise
+    error_rate: 0.65
+    noise_source_class: 9
+    total_epochs: 50
+    final_loss:
+      train: 0.4378351092338562
+      validation: 0.4567551612854004
+      test: 0.02356104925274849
+    accuracy:
+      train: 0.7338752243217566
+      validation: 0.6638513513513513
+      test: 0.9927760577915377
+    best_epoch: 6
+    precision: 0.9937238493723849
+    recall: 0.9916492693110647
+    f1_score: 0.9926854754440961
+    confusion_matrix:
+    - - 974
+      - 6
+    - - 8
+      - 950
+- experiment:
+    id: 0v6_external_noise_0.70
+    pair:
+    - 0
+    - 6
+    error_type: external_noise
+    error_rate: 0.7
+    noise_source_class: 7
+    total_epochs: 50
+    final_loss:
+      train: 0.4392047941684723
+      validation: 0.5049216896295547
+      test: 0.021417085081338882
+    accuracy:
+      train: 0.7561490552095429
+      validation: 0.6478040540540541
+      test: 0.9922600619195047
+    best_epoch: 11
+    precision: 0.9906347554630593
+    recall: 0.9937369519832986
+    f1_score: 0.9921834288692027
+    confusion_matrix:
+    - - 971
+      - 9
+    - - 6
+      - 952
+- experiment:
+    id: 0v6_external_noise_0.75
+    pair:
+    - 0
+    - 6
+    error_type: external_noise
+    error_rate: 0.75
+    noise_source_class: 8
+    total_epochs: 50
+    final_loss:
+      train: 0.5147023677825928
+      validation: 0.5234460979700089
+      test: 0.046639442443847656
+    accuracy:
+      train: 0.6864773566979837
+      validation: 0.6224662162162162
+      test: 0.9855521155830753
+    best_epoch: 3
+    precision: 0.9946808510638298
+    recall: 0.975991649269311
+    f1_score: 0.9852476290832455
+    confusion_matrix:
+    - - 975
+      - 5
+    - - 23
+      - 935
+- experiment:
+    id: 0v6_external_noise_0.80
+    pair:
+    - 0
+    - 6
+    error_type: external_noise
+    error_rate: 0.8
+    noise_source_class: 4
+    total_epochs: 50
+    final_loss:
+      train: 0.553004801273346
+      validation: 0.5884745419025421
+      test: 0.058812279254198074
+    accuracy:
+      train: 0.6579752982159822
+      validation: 0.6013513513513513
+      test: 0.9824561403508771
+    best_epoch: 2
+    precision: 0.9957081545064378
+    recall: 0.9686847599164927
+    f1_score: 0.982010582010582
+    confusion_matrix:
+    - - 976
+      - 4
+    - - 30
+      - 928
+- experiment:
+    id: 0v6_external_noise_0.85
+    pair:
+    - 0
+    - 6
+    error_type: external_noise
+    error_rate: 0.85
+    noise_source_class: 1
+    total_epochs: 50
+    final_loss:
+      train: 0.583484148979187
+      validation: 0.6082040965557098
+      test: 0.042435865849256516
+    accuracy:
+      train: 0.6209226221893803
+      validation: 0.5819256756756757
+      test: 0.9865841073271414
+    best_epoch: 5
+    precision: 0.9874476987447699
+    recall: 0.9853862212943633
+    f1_score: 0.9864158829676071
+    confusion_matrix:
+    - - 968
+      - 12
+    - - 14
+      - 944
+- experiment:
+    id: 0v6_external_noise_0.90
+    pair:
+    - 0
+    - 6
+    error_type: external_noise
+    error_rate: 0.9
+    noise_source_class: 7
+    total_epochs: 50
+    final_loss:
+      train: 0.6257896542549133
+      validation: 0.634183257818222
+      test: 0.08454607427120209
+    accuracy:
+      train: 0.5932650691438827
+      validation: 0.5456081081081081
+      test: 0.9752321981424149
+    best_epoch: 2
+    precision: 0.987152034261242
+    recall: 0.9624217118997912
+    f1_score: 0.9746300211416491
+    confusion_matrix:
+    - - 968
+      - 12
+    - - 36
+      - 922
+- experiment:
+    id: 0v6_external_noise_0.95
+    pair:
+    - 0
+    - 6
+    error_type: external_noise
+    error_rate: 0.95
+    noise_source_class: 9
+    total_epochs: 50
+    final_loss:
+      train: 0.6394699692726136
+      validation: 0.6697135865688324
+      test: 0.0800652876496315
+    accuracy:
+      train: 0.6117386255674021
+      validation: 0.519847972972973
+      test: 0.9731682146542827
+    best_epoch: 5
+    precision: 0.9913232104121475
+    recall: 0.954070981210856
+    f1_score: 0.9723404255319149
+    confusion_matrix:
+    - - 972
+      - 8
+    - - 44
+      - 914
+- experiment:
+    id: 0v6_external_noise_1.00
+    pair:
+    - 0
+    - 6
+    error_type: external_noise
+    error_rate: 1.0
+    noise_source_class: 5
+    total_epochs: 50
+    final_loss:
+      train: 0.6883160710334778
+      validation: 0.6935587227344513
+      test: 0.6965866684913635
+    accuracy:
+      train: 0.5465005805974876
+      validation: 0.5097128378378378
+      test: 0.5128998968008256
+    best_epoch: 1
+    precision: 0.5041128084606346
+    recall: 0.8956158663883089
+    f1_score: 0.6451127819548872
+    confusion_matrix:
+    - - 136
+      - 844
+    - - 100
+      - 858
+
+# --------------------------------------------------
+#   New Pair: 0 vs 7
+# --------------------------------------------------
+
+- experiment:
+    id: 0v7_mutual_mixing_0.00
+    pair:
+    - 0
+    - 7
+    error_type: mutual_mixing
+    error_rate: 0.0
+    noise_source_class: null
+    total_epochs: 50
+    final_loss:
+      train: 0.00042696030577644707
+      validation: 0.004001507943030447
+      test: 0.01153542846441269
+    accuracy:
+      train: 1.0
+      validation: 0.9995896594173164
+      test: 0.9975099601593626
+    best_epoch: 28
+    precision: 0.9970845481049563
+    recall: 0.9980544747081712
+    f1_score: 0.997569275644142
+    confusion_matrix:
+    - - 977
+      - 3
+    - - 2
+      - 1026
+- experiment:
+    id: 0v7_mutual_mixing_0.05
+    pair:
+    - 0
+    - 7
+    error_type: mutual_mixing
+    error_rate: 0.05
+    noise_source_class: null
+    total_epochs: 50
+    final_loss:
+      train: 0.18600954413414
+      validation: 0.1939432993531227
+      test: 0.06562809646129608
+    accuracy:
+      train: 0.9495436365500974
+      validation: 0.948297086581863
+      test: 0.9970119521912351
+    best_epoch: 6
+    precision: 0.9970817120622568
+    recall: 0.9970817120622568
+    f1_score: 0.9970817120622568
+    confusion_matrix:
+    - - 977
+      - 3
+    - - 3
+      - 1025
+- experiment:
+    id: 0v7_mutual_mixing_0.10
+    pair:
+    - 0
+    - 7
+    error_type: mutual_mixing
+    error_rate: 0.1
+    noise_source_class: null
+    total_epochs: 50
+    final_loss:
+      train: 0.30798837542533875
+      validation: 0.33432112634181976
+      test: 0.13492392003536224
+    accuracy:
+      train: 0.9009332376166547
+      validation: 0.8945424702503078
+      test: 0.9970119521912351
+    best_epoch: 6
+    precision: 0.9970817120622568
+    recall: 0.9970817120622568
+    f1_score: 0.9970817120622568
+    confusion_matrix:
+    - - 977
+      - 3
+    - - 3
+      - 1025
+- experiment:
+    id: 0v7_mutual_mixing_0.15
+    pair:
+    - 0
+    - 7
+    error_type: mutual_mixing
+    error_rate: 0.15
+    noise_source_class: null
+    total_epochs: 50
+    final_loss:
+      train: 0.41674278378486634
+      validation: 0.43746332824230194
+      test: 0.2051609754562378
+    accuracy:
+      train: 0.8479130345605579
+      validation: 0.854739433729996
+      test: 0.9960159362549801
+    best_epoch: 4
+    precision: 0.9961089494163424
+    recall: 0.9961089494163424
+    f1_score: 0.9961089494163424
+    confusion_matrix:
+    - - 976
+      - 4
+    - - 4
+      - 1024
+- experiment:
+    id: 0v7_mutual_mixing_0.20
+    pair:
+    - 0
+    - 7
+    error_type: mutual_mixing
+    error_rate: 0.2
+    noise_source_class: null
+    total_epochs: 50
+    final_loss:
+      train: 0.4942042648792267
+      validation: 0.5131576657295227
+      test: 0.28112608194351196
+    accuracy:
+      train: 0.8005332786380884
+      validation: 0.7944193680755026
+      test: 0.9970119521912351
+    best_epoch: 3
+    precision: 0.9970817120622568
+    recall: 0.9970817120622568
+    f1_score: 0.9970817120622568
+    confusion_matrix:
+    - - 977
+      - 3
+    - - 3
+      - 1025
+- experiment:
+    id: 0v7_mutual_mixing_0.25
+    pair:
+    - 0
+    - 7
+    error_type: mutual_mixing
+    error_rate: 0.25
+    noise_source_class: null
+    total_epochs: 50
+    final_loss:
+      train: 0.5274465918540955
+      validation: 0.5835764110088348
+      test: 0.3119003176689148
+    accuracy:
+      train: 0.756640344580043
+      validation: 0.7353303241690603
+      test: 0.9890438247011952
+    best_epoch: 8
+    precision: 0.9941060903732809
+    recall: 0.9844357976653697
+    f1_score: 0.989247311827957
+    confusion_matrix:
+    - - 974
+      - 6
+    - - 16
+      - 1012
+- experiment:
+    id: 0v7_mutual_mixing_0.30
+    pair:
+    - 0
+    - 7
+    error_type: mutual_mixing
+    error_rate: 0.3
+    noise_source_class: null
+    total_epochs: 50
+    final_loss:
+      train: 0.5992093920707703
+      validation: 0.6075633466243744
+      test: 0.40496504306793213
+    accuracy:
+      train: 0.6994154445697877
+      validation: 0.703734099302421
+      test: 0.9940239043824701
+    best_epoch: 4
+    precision: 0.9932038834951457
+    recall: 0.995136186770428
+    f1_score: 0.9941690962099126
+    confusion_matrix:
+    - - 973
+      - 7
+    - - 5
+      - 1023
+- experiment:
+    id: 0v7_mutual_mixing_0.35
+    pair:
+    - 0
+    - 7
+    error_type: mutual_mixing
+    error_rate: 0.35
+    noise_source_class: null
+    total_epochs: 50
+    final_loss:
+      train: 0.6282392144203186
+      validation: 0.6387341618537903
+      test: 0.4482364356517792
+    accuracy:
+      train: 0.6552148497589991
+      validation: 0.6503898235535495
+      test: 0.9875498007968128
+    best_epoch: 5
+    precision: 0.9911851126346719
+    recall: 0.9844357976653697
+    f1_score: 0.9877989263055149
+    confusion_matrix:
+    - - 971
+      - 9
+    - - 16
+      - 1012
+- experiment:
+    id: 0v7_mutual_mixing_0.40
+    pair:
+    - 0
+    - 7
+    error_type: mutual_mixing
+    error_rate: 0.4
+    noise_source_class: null
+    total_epochs: 50
+    final_loss:
+      train: 0.649494183063507
+      validation: 0.673678457736969
+      test: 0.5439417362213135
+    accuracy:
+      train: 0.6276279355963491
+      validation: 0.5888387361510053
+      test: 0.9178286852589641
+    best_epoch: 6
+    precision: 0.8912058023572076
+    recall: 0.9562256809338522
+    f1_score: 0.9225715626466447
+    confusion_matrix:
+    - - 860
+      - 120
+    - - 45
+      - 983
+- experiment:
+    id: 0v7_mutual_mixing_0.45
+    pair:
+    - 0
+    - 7
+    error_type: mutual_mixing
+    error_rate: 0.45
+    noise_source_class: null
+    total_epochs: 50
+    final_loss:
+      train: 0.6770840048789978
+      validation: 0.6895441710948944
+      test: 0.6318816542625427
+    accuracy:
+      train: 0.57563326838273
+      validation: 0.5293393516618794
+      test: 0.7778884462151394
+    best_epoch: 3
+    precision: 0.7362012987012987
+    recall: 0.882295719844358
+    f1_score: 0.8026548672566372
+    confusion_matrix:
+    - - 655
+      - 325
+    - - 121
+      - 907
+- experiment:
+    id: 0v7_mutual_mixing_0.50
+    pair:
+    - 0
+    - 7
+    error_type: mutual_mixing
+    error_rate: 0.5
+    noise_source_class: null
+    total_epochs: 50
+    final_loss:
+      train: 0.6912021636962891
+      validation: 0.6959736943244934
+      test: 0.7060532569885254
+    accuracy:
+      train: 0.5312275664034458
+      validation: 0.4895363151415675
+      test: 0.44173306772908366
+    best_epoch: 0
+    precision: 0.4709193245778612
+    recall: 0.7324902723735408
+    f1_score: 0.5732775028549676
+    confusion_matrix:
+    - - 134
+      - 846
+    - - 275
+      - 753
+- experiment:
+    id: 0v7_mutual_mixing_0.55
+    pair:
+    - 0
+    - 7
+    error_type: mutual_mixing
+    error_rate: 0.55
+    noise_source_class: null
+    total_epochs: 50
+    final_loss:
+      train: 0.6825154066085816
+      validation: 0.6885544955730438
+      test: 0.8321627974510193
+    accuracy:
+      train: 0.558301712644857
+      validation: 0.5601148953631514
+      test: 0.07868525896414343
+    best_epoch: 2
+    precision: 0.12154696132596685
+    recall: 0.12840466926070038
+    f1_score: 0.12488174077578051
+    confusion_matrix:
+    - - 26
+      - 954
+    - - 896
+      - 132
+- experiment:
+    id: 0v7_mutual_mixing_0.60
+    pair:
+    - 0
+    - 7
+    error_type: mutual_mixing
+    error_rate: 0.6
+    noise_source_class: null
+    total_epochs: 50
+    final_loss:
+      train: 0.6632542967796325
+      validation: 0.684330552816391
+      test: 0.900349497795105
+    accuracy:
+      train: 0.608552968926264
+      validation: 0.5810422650800164
+      test: 0.012948207171314742
+    best_epoch: 2
+    precision: 0.02108433734939759
+    recall: 0.020428015564202335
+    f1_score: 0.020750988142292492
+    confusion_matrix:
+    - - 5
+      - 975
+    - - 1007
+      - 21
+- experiment:
+    id: 0v7_mutual_mixing_0.65
+    pair:
+    - 0
+    - 7
+    error_type: mutual_mixing
+    error_rate: 0.65
+    noise_source_class: null
+    total_epochs: 50
+    final_loss:
+      train: 0.6493060946464538
+      validation: 0.6631385684013367
+      test: 0.9153751730918884
+    accuracy:
+      train: 0.6520356886473182
+      validation: 0.6479277800574477
+      test: 0.004482071713147411
+    best_epoch: 1
+    precision: 0.0040858018386108275
+    recall: 0.0038910505836575876
+    f1_score: 0.003986048829098156
+    confusion_matrix:
+    - - 5
+      - 975
+    - - 1024
+      - 4
+- experiment:
+    id: 0v7_mutual_mixing_0.70
+    pair:
+    - 0
+    - 7
+    error_type: mutual_mixing
+    error_rate: 0.7
+    noise_source_class: null
+    total_epochs: 50
+    final_loss:
+      train: 0.6085085988044738
+      validation: 0.6343866288661957
+      test: 1.0261520147323608
+    accuracy:
+      train: 0.7059788739616449
+      validation: 0.6713171932704144
+      test: 0.00199203187250996
+    best_epoch: 2
+    precision: 0.0010224948875255625
+    recall: 0.0009727626459143969
+    f1_score: 0.0009970089730807576
+    confusion_matrix:
+    - - 3
+      - 977
+    - - 1027
+      - 1
+- experiment:
+    id: 0v7_mutual_mixing_0.75
+    pair:
+    - 0
+    - 7
+    error_type: mutual_mixing
+    error_rate: 0.75
+    noise_source_class: null
+    total_epochs: 50
+    final_loss:
+      train: 0.542196249961853
+      validation: 0.5684729218482971
+      test: 1.2937374114990234
+    accuracy:
+      train: 0.7526407547943801
+      validation: 0.7464095199015183
+      test: 0.007470119521912351
+    best_epoch: 5
+    precision: 0.011144883485309016
+    recall: 0.010700389105058366
+    f1_score: 0.010918114143920596
+    confusion_matrix:
+    - - 4
+      - 976
+    - - 1017
+      - 11
+- experiment:
+    id: 0v7_mutual_mixing_0.80
+    pair:
+    - 0
+    - 7
+    error_type: mutual_mixing
+    error_rate: 0.8
+    noise_source_class: null
+    total_epochs: 50
+    final_loss:
+      train: 0.49116007089614866
+      validation: 0.521325945854187
+      test: 1.4109357595443726
+    accuracy:
+      train: 0.7994051892113629
+      validation: 0.8005744768157571
+      test: 0.0034860557768924302
+    best_epoch: 4
+    precision: 0.00508646998982706
+    recall: 0.0048638132295719845
+    f1_score: 0.004972650422675286
+    confusion_matrix:
+    - - 2
+      - 978
+    - - 1023
+      - 5
+- experiment:
+    id: 0v7_mutual_mixing_0.85
+    pair:
+    - 0
+    - 7
+    error_type: mutual_mixing
+    error_rate: 0.85
+    noise_source_class: null
+    total_epochs: 50
+    final_loss:
+      train: 0.41103277206420896
+      validation: 0.438184529542923
+      test: 1.726326823234558
+    accuracy:
+      train: 0.8511947492564865
+      validation: 0.8424292162494871
+      test: 0.00398406374501992
+    best_epoch: 4
+    precision: 0.0050916496945010185
+    recall: 0.0048638132295719845
+    f1_score: 0.004975124378109453
+    confusion_matrix:
+    - - 3
+      - 977
+    - - 1023
+      - 5
+- experiment:
+    id: 0v7_mutual_mixing_0.90
+    pair:
+    - 0
+    - 7
+    error_type: mutual_mixing
+    error_rate: 0.9
+    noise_source_class: null
+    total_epochs: 50
+    final_loss:
+      train: 0.32060585021972654
+      validation: 0.30287620425224304
+      test: 2.073021411895752
+    accuracy:
+      train: 0.8979591836734694
+      validation: 0.9043906442347148
+      test: 0.00298804780876494
+    best_epoch: 4
+    precision: 0.002044989775051125
+    recall: 0.0019455252918287938
+    f1_score: 0.0019940179461615153
+    confusion_matrix:
+    - - 4
+      - 976
+    - - 1026
+      - 2
+- experiment:
+    id: 0v7_mutual_mixing_0.95
+    pair:
+    - 0
+    - 7
+    error_type: mutual_mixing
+    error_rate: 0.95
+    noise_source_class: null
+    total_epochs: 50
+    final_loss:
+      train: 0.18616676032543183
+      validation: 0.21782872080802917
+      test: 2.79453182220459
+    accuracy:
+      train: 0.9504666188083274
+      validation: 0.9458350430857612
+      test: 0.00298804780876494
+    best_epoch: 7
+    precision: 0.004073319755600814
+    recall: 0.0038910505836575876
+    f1_score: 0.003980099502487562
+    confusion_matrix:
+    - - 2
+      - 978
+    - - 1024
+      - 4
+- experiment:
+    id: 0v7_mutual_mixing_1.00
+    pair:
+    - 0
+    - 7
+    error_type: mutual_mixing
+    error_rate: 1.0
+    noise_source_class: null
+    total_epochs: 50
+    final_loss:
+      train: 0.0005846253363415599
+      validation: 0.005253348266705871
+      test: 7.580358028411865
+    accuracy:
+      train: 1.0
+      validation: 0.9991793188346327
+      test: 0.00249003984063745
+    best_epoch: 26
+    precision: 0.0010235414534288639
+    recall: 0.0009727626459143969
+    f1_score: 0.000997506234413965
+    confusion_matrix:
+    - - 4
+      - 976
+    - - 1027
+      - 1
+
+- experiment:
+    id: 0v7_external_noise_0.00
+    pair:
+    - 0
+    - 7
+    error_type: external_noise
+    error_rate: 0.0
+    noise_source_class: null
+    total_epochs: 50
+    final_loss:
+      train: 0.00020503066771198063
+      validation: 0.0038636891404166818
+      test: 0.01025733258575201
+    accuracy:
+      train: 1.0
+      validation: 0.9983586376692655
+      test: 0.9975099601593626
+    best_epoch: 49
+    precision: 0.9970845481049563
+    recall: 0.9980544747081712
+    f1_score: 0.997569275644142
+    confusion_matrix:
+    - - 977
+      - 3
+    - - 2
+      - 1026
+- experiment:
+    id: 0v7_external_noise_0.05
+    pair:
+    - 0
+    - 7
+    error_type: external_noise
+    error_rate: 0.05
+    noise_source_class: 9
+    total_epochs: 50
+    final_loss:
+      train: 0.03453209474682808
+      validation: 0.0478859469294548
+      test: 0.012136007659137249
+    accuracy:
+      train: 0.9867705876320377
+      validation: 0.9745588838736151
+      test: 0.9975099601593626
+    best_epoch: 8
+    precision: 0.9970845481049563
+    recall: 0.9980544747081712
+    f1_score: 0.997569275644142
+    confusion_matrix:
+    - - 977
+      - 3
+    - - 2
+      - 1026
+- experiment:
+    id: 0v7_external_noise_0.10
+    pair:
+    - 0
+    - 7
+    error_type: external_noise
+    error_rate: 0.1
+    noise_source_class: 5
+    total_epochs: 50
+    final_loss:
+      train: 0.06904490888118744
+      validation: 0.0873953178524971
+      test: 0.010691742412745953
+    accuracy:
+      train: 0.9626704953338119
+      validation: 0.9458350430857612
+      test: 0.9975099601593626
+    best_epoch: 5
+    precision: 0.9980525803310614
+    recall: 0.9970817120622568
+    f1_score: 0.9975669099756691
+    confusion_matrix:
+    - - 978
+      - 2
+    - - 3
+      - 1025
+- experiment:
+    id: 0v7_external_noise_0.15
+    pair:
+    - 0
+    - 7
+    error_type: external_noise
+    error_rate: 0.15
+    noise_source_class: 2
+    total_epochs: 50
+    final_loss:
+      train: 0.1006643608212471
+      validation: 0.1234176978468895
+      test: 0.01453188806772232
+    accuracy:
+      train: 0.9453389395959388
+      validation: 0.9224456298727944
+      test: 0.9970119521912351
+    best_epoch: 5
+    precision: 0.9970817120622568
+    recall: 0.9970817120622568
+    f1_score: 0.9970817120622568
+    confusion_matrix:
+    - - 977
+      - 3
+    - - 3
+      - 1025
+- experiment:
+    id: 0v7_external_noise_0.20
+    pair:
+    - 0
+    - 7
+    error_type: external_noise
+    error_rate: 0.2
+    noise_source_class: 8
+    total_epochs: 50
+    final_loss:
+      train: 0.14098837673664094
+      validation: 0.16651061922311783
+      test: 0.012914353981614113
+    accuracy:
+      train: 0.9209311865449697
+      validation: 0.8912597455888387
+      test: 0.9960159362549801
+    best_epoch: 4
+    precision: 0.9951456310679612
+    recall: 0.9970817120622568
+    f1_score: 0.9961127308066083
+    confusion_matrix:
+    - - 975
+      - 5
+    - - 3
+      - 1025
+- experiment:
+    id: 0v7_external_noise_0.25
+    pair:
+    - 0
+    - 7
+    error_type: external_noise
+    error_rate: 0.25
+    noise_source_class: 5
+    total_epochs: 50
+    final_loss:
+      train: 0.17210199534893036
+      validation: 0.18182039260864258
+      test: 0.010464075952768326
+    accuracy:
+      train: 0.8987796123474515
+      validation: 0.8838736151005334
+      test: 0.9985059760956175
+    best_epoch: 4
+    precision: 0.9980563654033042
+    recall: 0.9990272373540856
+    f1_score: 0.9985415653864852
+    confusion_matrix:
+    - - 978
+      - 2
+    - - 1
+      - 1027
+- experiment:
+    id: 0v7_external_noise_0.30
+    pair:
+    - 0
+    - 7
+    error_type: external_noise
+    error_rate: 0.3
+    noise_source_class: 9
+    total_epochs: 50
+    final_loss:
+      train: 0.2135828524827957
+      validation: 0.21519975364208221
+      test: 0.01777508296072483
+    accuracy:
+      train: 0.8682186442416162
+      validation: 0.8559704554780467
+      test: 0.9965139442231076
+    best_epoch: 5
+    precision: 0.9980487804878049
+    recall: 0.995136186770428
+    f1_score: 0.9965903555772041
+    confusion_matrix:
+    - - 978
+      - 2
+    - - 5
+      - 1023
+- experiment:
+    id: 0v7_external_noise_0.35
+    pair:
+    - 0
+    - 7
+    error_type: external_noise
+    error_rate: 0.35
+    noise_source_class: 2
+    total_epochs: 50
+    final_loss:
+      train: 0.23682281076908113
+      validation: 0.28229038417339325
+      test: 0.01682453416287899
+    accuracy:
+      train: 0.8595015895805559
+      validation: 0.821501846532622
+      test: 0.9965139442231076
+    best_epoch: 5
+    precision: 0.997078870496592
+    recall: 0.9961089494163424
+    f1_score: 0.9965936739659368
+    confusion_matrix:
+    - - 977
+      - 3
+    - - 4
+      - 1024
+- experiment:
+    id: 0v7_external_noise_0.40
+    pair:
+    - 0
+    - 7
+    error_type: external_noise
+    error_rate: 0.4
+    noise_source_class: 1
+    total_epochs: 50
+    final_loss:
+      train: 0.27830045223236083
+      validation: 0.29040689766407013
+      test: 0.019164038822054863
+    accuracy:
+      train: 0.8170444057019793
+      validation: 0.7915469839967173
+      test: 0.9945219123505976
+    best_epoch: 7
+    precision: 0.9941690962099126
+    recall: 0.995136186770428
+    f1_score: 0.9946524064171123
+    confusion_matrix:
+    - - 974
+      - 6
+    - - 5
+      - 1023
+- experiment:
+    id: 0v7_external_noise_0.45
+    pair:
+    - 0
+    - 7
+    error_type: external_noise
+    error_rate: 0.45
+    noise_source_class: 4
+    total_epochs: 50
+    final_loss:
+      train: 0.310625159740448
+      validation: 0.3432427942752838
+      test: 0.01837792433798313
+    accuracy:
+      train: 0.8182750487129525
+      validation: 0.7685679113664341
+      test: 0.9970119521912351
+    best_epoch: 5
+    precision: 0.9980506822612085
+    recall: 0.9961089494163424
+    f1_score: 0.997078870496592
+    confusion_matrix:
+    - - 978
+      - 2
+    - - 4
+      - 1024
+- experiment:
+    id: 0v7_external_noise_0.50
+    pair:
+    - 0
+    - 7
+    error_type: external_noise
+    error_rate: 0.5
+    noise_source_class: 4
+    total_epochs: 50
+    final_loss:
+      train: 0.33737860918045043
+      validation: 0.38209445774555206
+      test: 0.01696632243692875
+    accuracy:
+      train: 0.7997128499641063
+      validation: 0.7423061140746819
+      test: 0.9970119521912351
+    best_epoch: 5
+    precision: 0.9980506822612085
+    recall: 0.9961089494163424
+    f1_score: 0.997078870496592
+    confusion_matrix:
+    - - 978
+      - 2
+    - - 4
+      - 1024
+- experiment:
+    id: 0v7_external_noise_0.55
+    pair:
+    - 0
+    - 7
+    error_type: external_noise
+    error_rate: 0.55
+    noise_source_class: 4
+    total_epochs: 50
+    final_loss:
+      train: 0.36961262226104735
+      validation: 0.40126068890094757
+      test: 0.015450221486389637
+    accuracy:
+      train: 0.7832017229002154
+      validation: 0.721378744357817
+      test: 0.9975099601593626
+    best_epoch: 6
+    precision: 0.9970845481049563
+    recall: 0.9980544747081712
+    f1_score: 0.997569275644142
+    confusion_matrix:
+    - - 977
+      - 3
+    - - 2
+      - 1026
+- experiment:
+    id: 0v7_external_noise_0.60
+    pair:
+    - 0
+    - 7
+    error_type: external_noise
+    error_rate: 0.6
+    noise_source_class: 5
+    total_epochs: 50
+    final_loss:
+      train: 0.4090782940387726
+      validation: 0.43165232241153717
+      test: 0.016181277111172676
+    accuracy:
+      train: 0.7514101117834068
+      validation: 0.7160443167829298
+      test: 0.9965139442231076
+    best_epoch: 4
+    precision: 0.997078870496592
+    recall: 0.9961089494163424
+    f1_score: 0.9965936739659368
+    confusion_matrix:
+    - - 977
+      - 3
+    - - 4
+      - 1024
+- experiment:
+    id: 0v7_external_noise_0.65
+    pair:
+    - 0
+    - 7
+    error_type: external_noise
+    error_rate: 0.65
+    noise_source_class: 1
+    total_epochs: 50
+    final_loss:
+      train: 0.4452041208744049
+      validation: 0.4526061862707138
+      test: 0.024428870528936386
+    accuracy:
+      train: 0.7196185006665983
+      validation: 0.6778826425933525
+      test: 0.9930278884462151
+    best_epoch: 9
+    precision: 0.9951171875
+    recall: 0.9912451361867705
+    f1_score: 0.99317738791423
+    confusion_matrix:
+    - - 975
+      - 5
+    - - 9
+      - 1019
+- experiment:
+    id: 0v7_external_noise_0.70
+    pair:
+    - 0
+    - 7
+    error_type: external_noise
+    error_rate: 0.7
+    noise_source_class: 5
+    total_epochs: 50
+    final_loss:
+      train: 0.4770151197910309
+      validation: 0.4871162474155426
+      test: 0.0216171033680439
+    accuracy:
+      train: 0.7156189108809353
+      validation: 0.6655724251128436
+      test: 0.9935258964143426
+    best_epoch: 4
+    precision: 0.9951219512195122
+    recall: 0.9922178988326849
+    f1_score: 0.9936678032148076
+    confusion_matrix:
+    - - 975
+      - 5
+    - - 8
+      - 1020
+- experiment:
+    id: 0v7_external_noise_0.75
+    pair:
+    - 0
+    - 7
+    error_type: external_noise
+    error_rate: 0.75
+    noise_source_class: 8
+    total_epochs: 50
+    final_loss:
+      train: 0.5104514181613922
+      validation: 0.5522231757640839
+      test: 0.023632779717445374
+    accuracy:
+      train: 0.6967490513793457
+      validation: 0.6159212146081248
+      test: 0.9940239043824701
+    best_epoch: 4
+    precision: 0.99609375
+    recall: 0.9922178988326849
+    f1_score: 0.9941520467836257
+    confusion_matrix:
+    - - 976
+      - 4
+    - - 8
+      - 1020
+- experiment:
+    id: 0v7_external_noise_0.80
+    pair:
+    - 0
+    - 7
+    error_type: external_noise
+    error_rate: 0.8
+    noise_source_class: 5
+    total_epochs: 50
+    final_loss:
+      train: 0.5532644987106323
+      validation: 0.5606303513050079
+      test: 0.03823835775256157
+    accuracy:
+      train: 0.6562403856014768
+      validation: 0.6077144029544522
+      test: 0.9940239043824701
+    best_epoch: 2
+    precision: 0.99706457925636
+    recall: 0.9912451361867705
+    f1_score: 0.9941463414634146
+    confusion_matrix:
+    - - 977
+      - 3
+    - - 9
+      - 1019
+- experiment:
+    id: 0v7_external_noise_0.85
+    pair:
+    - 0
+    - 7
+    error_type: external_noise
+    error_rate: 0.85
+    noise_source_class: 1
+    total_epochs: 50
+    final_loss:
+      train: 0.5869256973266601
+      validation: 0.586468368768692
+      test: 0.027082769200205803
+    accuracy:
+      train: 0.6158342734078556
+      validation: 0.5740664751743948
+      test: 0.9905378486055777
+    best_epoch: 4
+    precision: 0.9970443349753695
+    recall: 0.9844357976653697
+    f1_score: 0.990699951052374
+    confusion_matrix:
+    - - 977
+      - 3
+    - - 16
+      - 1012
+- experiment:
+    id: 0v7_external_noise_0.90
+    pair:
+    - 0
+    - 7
+    error_type: external_noise
+    error_rate: 0.9
+    noise_source_class: 1
+    total_epochs: 50
+    final_loss:
+      train: 0.6221916437149048
+      validation: 0.6493237018585205
+      test: 0.04827258735895157
+    accuracy:
+      train: 0.5839401087067994
+      validation: 0.5408288879770209
+      test: 0.9855577689243028
+    best_epoch: 2
+    precision: 0.9980059820538385
+    recall: 0.9737354085603113
+    f1_score: 0.9857213195470211
+    confusion_matrix:
+    - - 978
+      - 2
+    - - 27
+      - 1001
+- experiment:
+    id: 0v7_external_noise_0.95
+    pair:
+    - 0
+    - 7
+    error_type: external_noise
+    error_rate: 0.95
+    noise_source_class: 8
+    total_epochs: 50
+    final_loss:
+      train: 0.6335598587989807
+      validation: 0.6741545796394348
+      test: 0.09665273129940033
+    accuracy:
+      train: 0.633883704235463
+      validation: 0.5379565038982356
+      test: 0.9920318725099602
+    best_epoch: 4
+    precision: 0.994140625
+    recall: 0.9902723735408561
+    f1_score: 0.9922027290448343
+    confusion_matrix:
+    - - 974
+      - 6
+    - - 10
+      - 1018
+- experiment:
+    id: 0v7_external_noise_1.00
+    pair:
+    - 0
+    - 7
+    error_type: external_noise
+    error_rate: 1.0
+    noise_source_class: 1
+    total_epochs: 50
+    final_loss:
+      train: 0.6911229491233826
+      validation: 0.693282425403595
+      test: 0.7044531106948853
+    accuracy:
+      train: 0.5338939595938879
+      validation: 0.5018465326220763
+      test: 0.44621513944223107
+    best_epoch: 1
+    precision: 0.2529411764705882
+    recall: 0.04182879377431906
+    f1_score: 0.07178631051752922
+    confusion_matrix:
+    - - 853
+      - 127
+    - - 985
+      - 43
+
+# --------------------------------------------------
+#   New Pair: 0 vs 8
+# --------------------------------------------------
+
+- experiment:
+    id: 0v8_mutual_mixing_0.00
+    pair:
+    - 0
+    - 8
+    error_type: mutual_mixing
+    error_rate: 0.0
+    noise_source_class: null
+    total_epochs: 50
+    final_loss:
+      train: 0.0005600573378615082
+      validation: 0.0047051230212673545
+      test: 0.018804432824254036
+    accuracy:
+      train: 1.0
+      validation: 0.9983007646559049
+      test: 0.9948822927328557
+    best_epoch: 29
+    precision: 0.9958847736625515
+    recall: 0.9938398357289527
+    f1_score: 0.9948612538540597
+    confusion_matrix:
+    - - 976
+      - 4
+    - - 6
+      - 968
