@@ -1,9 +1,11 @@
+# src/train.py
 
 import torch
 import torch.nn as nn
 import torch.optim as optim
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, confusion_matrix
 import copy
+from tqdm import tqdm
 
 def evaluate(model, data_loader, device):
     """Evaluates the model on the given data loader."""
@@ -43,10 +45,13 @@ def run_experiment(model, train_loader, val_loader, test_loader, config):
     
     history = {'train_loss': [], 'val_loss': [], 'train_acc': [], 'val_acc': []}
 
-    for epoch in range(config['training_params']['epochs']):
+    epochs = config['training_params']['epochs']
+    epoch_pbar = tqdm(range(epochs), desc="Epochs", leave=False) # leave=Falseでループ終了後にバーを消す
+
+    for epoch in epoch_pbar:
         # --- Training ---
         model.train()
-        train_loss_epoch = 0.0
+        # BCEWithLogitsLossは内部でSigmoidを適用するため、手動でのSigmoidは不要
         for inputs, labels in train_loader:
             inputs, labels = inputs.to(device), labels.to(device).float().unsqueeze(1)
             
@@ -55,7 +60,6 @@ def run_experiment(model, train_loader, val_loader, test_loader, config):
             loss = criterion(outputs, labels)
             loss.backward()
             optimizer.step()
-            train_loss_epoch += loss.item()
         
         # --- Evaluation ---
         avg_train_loss, train_acc, _, _ = evaluate(model, train_loader, device)
@@ -65,6 +69,8 @@ def run_experiment(model, train_loader, val_loader, test_loader, config):
         history['val_loss'].append(avg_val_loss)
         history['train_acc'].append(train_acc)
         history['val_acc'].append(val_acc)
+
+        epoch_pbar.set_postfix(train_loss=f"{avg_train_loss:.4f}", val_loss=f"{avg_val_loss:.4f}", val_acc=f"{val_acc:.4f}")
         
         if avg_val_loss < best_val_loss:
             best_val_loss = avg_val_loss
@@ -80,7 +86,7 @@ def run_experiment(model, train_loader, val_loader, test_loader, config):
     
     # --- Collect Metrics ---
     results = {
-        'total_epochs': config['training_params']['epochs'],
+        'total_epochs': epochs,
         'final_loss': {
             'train': final_train_loss,
             'validation': final_val_loss,
