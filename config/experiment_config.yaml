@@ -9,7 +9,7 @@ seed: 42
 results_file: "results/experiment_outputs.yaml"
 # 使用するデバイス ('cuda' or 'cpu')
 # GPUが利用可能な場合は 'cuda' に変更すると高速になります
-device: "cpu"
+device: "cuda"
 
 
 # --- 2. 実験範囲の設定 ---
