@@ -11,6 +11,8 @@ results_file: "results/experiment_outputs.yaml"
 # GPUが利用可能な場合は 'cuda' に変更
 device: "cuda"
 
+save_models: false
+model_save_dir: "models/" # 保存先のディレクトリ名
 
 # --- 2. 実験範囲の設定 ---
 # 対象とする数字のペア。nullにすると全45ペアで実行

@@ -99,9 +99,16 @@ def main():
         )
         
         model = FullyConnectedNet(**config['model_params'])
-        performance_metrics = run_experiment(model, train_loader, val_loader, test_loader, config)
+        
+        performance_metrics, best_model_state = run_experiment(model, train_loader, val_loader, test_loader, config)
         
         result_entry = {'experiment': {'id': current_id, **exp_conditions, **performance_metrics}}
+
+        if config.get('save_models', False):
+            model_save_dir = config.get('model_save_dir', 'models/')
+            os.makedirs(model_save_dir, exist_ok=True)
+            save_path = os.path.join(model_save_dir, f"{current_id}.pth")
+            torch.save(best_model_state, save_path)
 
         with open(results_filepath, 'a') as f:
             current_pair = tuple(exp_conditions['pair'])

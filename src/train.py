@@ -77,6 +77,7 @@ def run_experiment(model, train_loader, val_loader, test_loader, config):
             best_epoch = epoch
             best_model_state = copy.deepcopy(model.state_dict())
 
+
     # --- Final Evaluation with Best Model ---
     model.load_state_dict(best_model_state)
     
@@ -87,20 +88,12 @@ def run_experiment(model, train_loader, val_loader, test_loader, config):
     # --- Collect Metrics ---
     results = {
         'total_epochs': epochs,
-        'final_loss': {
-            'train': final_train_loss,
-            'validation': final_val_loss,
-            'test': final_test_loss
-        },
-        'accuracy': {
-            'train': final_train_acc,
-            'validation': final_val_acc,
-            'test': final_test_acc
-        },
+        'final_loss': { 'train': final_train_loss, 'validation': final_val_loss, 'test': final_test_loss },
+        'accuracy': { 'train': final_train_acc, 'validation': final_val_acc, 'test': final_test_acc },
         'best_epoch': best_epoch,
         'precision': precision_score(test_labels, test_preds, zero_division=0),
         'recall': recall_score(test_labels, test_preds, zero_division=0),
         'f1_score': f1_score(test_labels, test_preds, zero_division=0),
         'confusion_matrix': confusion_matrix(test_labels, test_preds).tolist()
     }
-    return results
+    return results, best_model_state
