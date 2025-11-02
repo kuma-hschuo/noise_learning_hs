@@ -11,7 +11,7 @@ def create_and_save_tables(results_file="results/experiment_outputs.yaml", outpu
     さらに画像ファイルとして指定されたディレクトリに保存する。
     """
     
-    # --- 1. YAMLファイルの読み込み (既存のロジックと同じ) ---
+    # --- 1. YAMLファイルの読み込み ---
     try:
         with open(results_file, 'r') as f:
             docs = list(yaml.safe_load_all(f))
@@ -28,7 +28,7 @@ def create_and_save_tables(results_file="results/experiment_outputs.yaml", outpu
         print("実験結果が見つかりません。")
         return
 
-    # --- 2. データをpandas DataFrameに変換 (既存のロジックと同じ) ---
+    # --- 2. データをpandas DataFrameに変換 ---
     data_for_df = [{'pair': tuple(r['experiment']['pair']), 'error_type': r['experiment']['error_type'],
                     'error_rate': r['experiment']['error_rate'], 'test_accuracy': r['experiment']['accuracy']['test']}
                    for r in results_list]
@@ -55,17 +55,12 @@ def create_and_save_tables(results_file="results/experiment_outputs.yaml", outpu
         print(summary_table)
         print("\n" + "-"*50 + "\n")
 
-        # ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
-        #  ここからが画像として保存する新しいロジック
-        # ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+        # --- 画像として保存するロジック ---
         
-        # 1. 描画領域(figure)と描画座標(axis)を作成
-        fig, ax = plt.subplots(figsize=(8, 6)) # figsizeで画像のサイズを調整
+        fig, ax = plt.subplots(figsize=(8, 7))
 
-        # 2. 座標軸を非表示にする（表だけを表示するため）
         ax.axis('off')
 
-        # 3. DataFrameからテーブルを作成
         table = ax.table(
             cellText=summary_table.values,
             colLabels=summary_table.columns,
@@ -75,19 +70,14 @@ def create_and_save_tables(results_file="results/experiment_outputs.yaml", outpu
         )
         table.auto_set_font_size(False)
         table.set_fontsize(12)
-        table.scale(1.2, 1.5) # セルのサイズを調整
+        table.scale(1.2, 1.5)
 
-        # 4. タイトルを追加
-        ax.set_title(f"Pair: {pair[0]} vs {pair[1]} | Test Accuracy", fontsize=16, pad=20)
+        ax.set_title(f"Pair: {pair[0]} vs {pair[1]} | Test Accuracy", fontsize=16, pad=40)
 
-        # 5. ファイルとして保存
         filename = f"table_pair_{pair[0]}_{pair[1]}.png"
         save_path = os.path.join(output_dir, filename)
         
-        # dpiで解像度、bbox_inches='tight'で余白をトリミング
         plt.savefig(save_path, dpi=300, bbox_inches='tight')
-        
-        # メモリを解放するためにプロットを閉じる（ループ内で必須）
         plt.close(fig)
 
     print(f"全{len(grouped)}個のテーブルが画像として保存されました。")
