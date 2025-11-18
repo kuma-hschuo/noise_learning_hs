@@ -1,0 +1,36 @@
+python summarize_locally.py
+'results/experiment_outputs.yaml' から実験結果を読み込んでいます...
+--- 分析を開始します ---
+
+[分析中] ステップ1: 全体平均性能を計算・可視化...
+/home/pico_ubu/program/hs_chuo/first_sogo/summarize_locally.py:62: UserWarning: set_ticklabels() should only be used with a fixed number of ticks, i.e. after set_ticks() or using a FixedLocator.
+  ax.set_xticklabels([f'{x:.0%}' for x in ax.get_xticks()])
+... グラフ 'average_performance.png' を保存しました。
+[分析中] ステップ2: 脆弱ペアと頑健ペアを特定...
+[分析中] ステップ3: 代表ペアの性能を可視化...
+/home/pico_ubu/program/hs_chuo/first_sogo/summarize_locally.py:62: UserWarning: set_ticklabels() should only be used with a fixed number of ticks, i.e. after set_ticks() or using a FixedLocator.
+  ax.set_xticklabels([f'{x:.0%}' for x in ax.get_xticks()])
+... グラフ 'vulnerable_pair.png' を保存しました。
+/home/pico_ubu/program/hs_chuo/first_sogo/summarize_locally.py:62: UserWarning: set_ticklabels() should only be used with a fixed number of ticks, i.e. after set_ticks() or using a FixedLocator.
+  ax.set_xticklabels([f'{x:.0%}' for x in ax.get_xticks()])
+... グラフ 'robust_pair.png' を保存しました。
+
+==================================================
+      研究結果の主要な発見 (Key Findings)
+==================================================
+
+1. 【全体傾向】
+   - **相互混合ノイズ**は、外部ノイズよりも一貫してモデル性能を大きく低下させる傾向にある。
+   - (例: 誤り率50%時点で、平均精度は相互混合: 0.557, 外部: 0.993)
+
+2. 【ペアによる脆弱性の違い】
+   - ノイズへの耐性は、分類対象の数字ペアに強く依存する。
+   - **最も脆弱だったペア Top 5:** 2 vs 6, 3 vs 7, 1 vs 6, 0 vs 4, 5 vs 7
+   - **最も頑健だったペア Top 5:** 1 vs 2, 1 vs 3, 6 vs 7, 0 vs 3, 2 vs 7
+
+3. 【脆弱性の原因考察】
+   - 脆弱なペアは、人間が視覚的に混同しやすい形状の類似した数字（例: 2 vs 6）と強い相関が見られた。
+   - これらのペアは、特にクラス間でデータを入れ替える**相互混合ノイズ**に対して急激な性能劣化を示した。
+
+--- 分析完了 ---
+3枚のグラフが 'summary_report/' フォルダに保存されました。
